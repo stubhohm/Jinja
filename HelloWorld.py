@@ -3,11 +3,11 @@ from jinja2 import Environment, FileSystemLoader
 env = Environment(loader=FileSystemLoader('.'))
 template = env.get_template('HelloWorld.j2')
 
-msg = 'message'
+msg = 'msg'
 
 list_items = 'list'
 
-item_1, item_2 , item_3 = 'item 2', 'item 2', 'item 3'
+item_1, item_2 , item_3 = 'item 1', 'item 2', 'item 3'
 
 bread, milk, cheese = 'bread', 'milk', 'cheese'
 
