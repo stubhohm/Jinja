@@ -1,10 +1,6 @@
-{{
-    message
-}}
-{%
-    for item in list
-%}
-    the {{item}} is {{list[item]}}
-{%
-    endfor
-%}
+from {{CTX.lower}} to {{CTX.upper}}
+{% set lower = CTX.lower %}
+{% set upper = CTX.upper %}
+{%for i in range(lower, upper)%}
+    {% set is_prime = true %}
+{% endfor %}
