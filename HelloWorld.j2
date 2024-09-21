@@ -1,6 +1,9 @@
-from {{CTX.lower}} to {{CTX.upper}}
-{% set lower = CTX.lower %}
-{% set upper = CTX.upper %}
-{%for i in range(lower, upper)%}
-    {% set is_prime = true %}
-{% endfor %}
+{% set lower = CTX.lower%}{%set upper = CTX.upper%}{%set run_time, prime_count = CTX.find_primes(lower, upper)%}
+{%if prime_count > 1%}
+The script found {{prime_count}} prime numbers between the numbers {{lower}} and {{upper}}.
+{% elif prime_count == 1 %} 
+The script found {{prime_count}} prime number between {{lower}} and {{upper}}.
+{% else %}
+The script found no prime numbers between {{lower}} and {{upper}}.
+{% endif %}
+The script took {{run_time}} seconds to run.
