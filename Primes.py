@@ -31,7 +31,12 @@ def find_primes(lower:int, upper:int):
 
     finish = time.time()
     total = finish - start
-
-    return total, len(in_range_primes) 
+    text = f'The scrip found {len(in_range_primes)} prime '
+    if len(in_range_primes) > 1 or len(in_range_primes) == 0:
+        text += 'numbers '
+    else: 
+        text += 'number '
+    text += f'between the numbers {lower} and {upper}'
+    return total, text
     print(f'{len(in_range_primes)} prime numbers bettween {lower} and {upper}')
     print(f'Total time {total}')
